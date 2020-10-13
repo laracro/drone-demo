@@ -6,8 +6,8 @@ steps:
 - name: build
   image: golang
   environment:
-    A_SECRET:
-      from_secret: a_secret
+    DRONE_DEMO_SECRET:
+      from_secret: drone_demo_secret
   commands:
   - echo ?A_SECRET
   - go run . > test_secret.txt
